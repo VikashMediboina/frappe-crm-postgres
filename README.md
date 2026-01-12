@@ -1,28 +1,13 @@
-<div align="center" markdown="1">
+# CRM - PostgreSQL Patched Edition
 
-<a href="https://frappe.io/products/crm">
-    <img src=".github/logo.svg" height="80" alt="Frappe CRM Logo">
-</a>
-
-<h1>Frappe CRM - PostgreSQL Patched Edition</h1>
-
-**Simplify Sales, Amplify Relationships** | **Enhanced PostgreSQL Compatibility**
+**Enhanced PostgreSQL Compatibility**
 
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Supported-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![MySQL](https://img.shields.io/badge/MySQL-Supported-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 
-<div>
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/FrappeCRMHeroImage.png">
-        <img width="1402" alt="Frappe CRM Hero Image" src=".github/screenshots/FrappeCRMHeroImage.png">
-    </picture>
-</div>
-
-</div>
-
 ## ⚠️ Important Notice
 
-**This is a modified version of Frappe CRM with PostgreSQL compatibility patches applied.** This version includes comprehensive PostgreSQL compatibility fixes and improvements to ensure seamless operation with both MySQL/MariaDB and PostgreSQL databases.
+**This is a modified version with PostgreSQL compatibility patches applied.** This version includes comprehensive PostgreSQL compatibility fixes and improvements to ensure seamless operation with both MySQL/MariaDB and PostgreSQL databases.
 
 **Original Repository:** [frappe/crm](https://github.com/frappe/crm)
 
@@ -50,7 +35,7 @@ This version includes comprehensive PostgreSQL compatibility patches and improve
    - Fixed HAVING clause to use column names instead of aliases
    - Added proper date casting for parameter placeholders
    - Fixed boolean field comparisons (True/False → 1/0)
-   - Fixed `frappe.db.exists()` calls with doctype key handling
+   - Fixed database existence check calls with doctype key handling
 
 4. **Files Modified**
    - `crm/api/dashboard.py` - 19+ SQL queries updated
@@ -72,13 +57,9 @@ This version includes comprehensive PostgreSQL compatibility patches and improve
 
 For detailed information about all PostgreSQL compatibility changes, see [POSTGRESQL_COMPATIBILITY_ISSUES.md](POSTGRESQL_COMPATIBILITY_ISSUES.md).
 
-## Frappe CRM
+## About
 
-Frappe CRM is a simple, affordable, open-source CRM tool designed for modern sales teams with unlimited users. Frappe CRM is crafted for providing a great user experience, packed with features for core CRM activities helping you build strong customer relationships while keeping things clean and organised.
-
-### Motivation
-
-The motivation behind building Frappe CRM stems from the need for a simple, customizable, and open-source solution tailored to modern business needs. Many existing CRMs are either too complex, overly generic, or locked behind steep pricing models that hinder accessibility and flexibility. Frappe CRM was designed to bridge this gap, offering a tool that empowers businesses to manage their customer relationships seamlessly while being easy to adapt to specific workflows. Built on the Frappe framework, it prioritizes usability, extensibility, and affordability, making it an ideal choice for growing teams and organizations looking for a CRM that aligns with their unique processes.
+This is a simple, affordable, open-source CRM tool designed for modern sales teams with unlimited users. It provides a great user experience with features for core CRM activities, helping you build strong customer relationships while keeping things clean and organized.
 
 **This version with PostgreSQL compatibility patches extends that vision by providing enhanced database flexibility and improved PostgreSQL support, allowing teams to choose the database that best fits their infrastructure and requirements.**
 
@@ -90,65 +71,24 @@ The motivation behind building Frappe CRM stems from the need for a simple, cust
 -   **Kanban View:** Manage leads and deals visually with a drag-and-drop Kanban board, offering clarity and efficiency in tracking progress across stages.
 -   **Custom Views:** Design personalized views to organize and display leads and deals using custom filters, sorting, and columns, ensuring quick access to the most relevant information.
 
-    <details>
-    <summary>Screenshots</summary>
-
-    <div>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/LeadList.png">
-            <img width="1402" alt="Lead List" src=".github/screenshots/LeadList.png">
-        </picture>
-    </div>
-    <div>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/LeadPage.png">
-            <img width="1402" alt="Lead Page" src=".github/screenshots/LeadPage.png">
-        </picture>
-    </div>
-    <div>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/EmailTemplate.png">
-            <img width="1402" alt="Email Template" src=".github/screenshots/EmailTemplate.png">
-        </picture>
-    </div>
-    <div>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/CallUI.png">
-            <img width="1402" alt="Call UI" src=".github/screenshots/CallUI.png">
-        </picture>
-    </div>
-    <div>
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset=".github/screenshots/CallLog.png">
-            <img width="1402" alt="Call Log" src=".github/screenshots/CallLog.png">
-        </picture>
-    </div>
-
-    </details>
-
 ### Integrations
 
 -   **Twilio:** Integrate Twilio to make and receive calls from the CRM. You can also record calls. It is a built-in integration.
 -   **Exotel:** Integrate Exotel to make and receive calls via agents mobile phone from the CRM. You can also record calls. It is a built-in integration.
--   **WhatsApp:** Integrate WhatsApp to send and receive messages from the CRM. [Frappe WhatsApp](https://github.com/shridarpatil/frappe_whatsapp) is used for this integration.
--   **ERPNext:** Integrate with [ERPNext](https://erpnext.com) to extend the CRM capabilities to include invoicing, accounting, and more.
-
-### Under the Hood
-
-- [Frappe Framework](https://github.com/frappe/frappe): A full-stack web application framework.
-- [Frappe UI](https://github.com/frappe/frappe-ui): A Vue-based UI library, to provide a modern user interface.
+-   **WhatsApp:** Integrate WhatsApp to send and receive messages from the CRM.
+-   **ERPNext:** Integrate with ERPNext to extend the CRM capabilities to include invoicing, accounting, and more.
 
 ### Compatibility
-This app is compatible with the following versions of Frappe and ERPNext:
+This app is compatible with the following versions:
 
-| CRM branch            | Stability | Frappe branch        | ERPNext branch       | Database Support |
-| :-------------------- | :-------- | :------------------- | :------------------- | :--------------- |
-| main - v1.x           | stable    | v15.x                | v15.x                | MySQL, PostgreSQL |
-| develop - future/v2.x | unstable  | develop - future/v16 | develop - future/v16 | MySQL, PostgreSQL |
+| CRM branch            | Stability | Framework branch     | Database Support |
+| :-------------------- | :-------- | :------------------- | :--------------- |
+| main - v1.x           | stable    | v15.x                | MySQL, PostgreSQL |
+| develop - future/v2.x | unstable  | develop - future/v16 | MySQL, PostgreSQL |
 
 ### Database Support
 
-This version of Frappe CRM supports both **MySQL/MariaDB** and **PostgreSQL** databases. All SQL queries have been updated to be database-agnostic, using conditional SQL generation based on the database type.
+This version includes PostgreSQL compatibility patches and supports both **MySQL/MariaDB** and **PostgreSQL** databases. All SQL queries have been updated to be database-agnostic, using conditional SQL generation based on the database type.
 
 **Supported Databases:**
 - ✅ **PostgreSQL** (9.6+) - Fully tested and compatible
@@ -156,7 +96,7 @@ This version of Frappe CRM supports both **MySQL/MariaDB** and **PostgreSQL** da
 - ✅ **MariaDB** (10.2+) - Fully compatible
 
 **Implementation Details:**
-- All raw SQL queries use conditional SQL generation based on `frappe.db.db_type`
+- All raw SQL queries use conditional SQL generation based on database type detection
 - Helper functions created for database-agnostic date operations
 - Proper handling of date arithmetic and casting for both database types
 - PostgreSQL GROUP BY strictness compliance
@@ -170,29 +110,15 @@ This version of Frappe CRM supports both **MySQL/MariaDB** and **PostgreSQL** da
 - ✅ Cross-database boolean field comparisons
 - ✅ Database-agnostic query builder usage
 - ✅ Fixed HAVING clause alias usage
-- ✅ Fixed `frappe.db.exists()` calls with doctype key handling
+- ✅ Fixed database existence check calls with doctype key handling
 
 For detailed information about the PostgreSQL compatibility implementation, see [POSTGRESQL_COMPATIBILITY_ISSUES.md](POSTGRESQL_COMPATIBILITY_ISSUES.md).
 
 ## Getting Started (Production)
 
-### Managed Hosting
-
-Get started with your personal or business site with a few clicks on Frappe Cloud - our official hosting service.
-<div>
-	<a href="https://frappecloud.com/crm/signup" target="_blank">
-		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/try-on-fc-white.png">
-			<img src="https://frappe.io/files/try-on-fc-black.png" alt="Try on Frappe Cloud" height="28" />
-		</picture>
-	</a>
-</div>
-
-**Note:** When using this PostgreSQL-compatible version, ensure your hosting provider supports PostgreSQL or configure your site to use PostgreSQL.
-
 ### Self Hosting
 
-Follow these steps to set up Frappe CRM in production:
+Follow these steps to set up the CRM in production:
 
 **Step 1**: Download the easy install script
 
@@ -222,7 +148,7 @@ Replace the following parameters with your values:
 If you want to use PostgreSQL instead of MySQL, you'll need to:
 
 1. Install PostgreSQL on your server
-2. Create a database and user for Frappe CRM
+2. Create a database and user for the CRM
 3. Configure your site to use PostgreSQL by setting the database configuration in `site_config.json`:
 
 ```json
@@ -236,13 +162,13 @@ If you want to use PostgreSQL instead of MySQL, you'll need to:
 }
 ```
 
-The script will set up a production-ready instance of Frappe CRM with all the necessary configurations in about 5 minutes.
+The script will set up a production-ready instance with all the necessary configurations in about 5 minutes.
 
 ## Getting Started (Development)
 
 ### Local Setup
 
-1. [Setup Bench](https://docs.frappe.io/framework/user/en/installation).
+1. Setup Bench (refer to framework documentation).
 2. In the frappe-bench directory, run `bench start` and keep it running.
 3. Open a new terminal session and cd into `frappe-bench` directory and run following commands:
     ```sh
@@ -268,7 +194,7 @@ $ bench new-site sitename.localhost --db-type postgres --install-app crm
     ```
 1. Now, you can access the site on vite dev server at `http://sitename.localhost:8080`
 
-**Note:** You'll find all the code related to Frappe CRM's frontend inside `frappe-bench/apps/crm/frontend`
+**Note:** You'll find all the code related to the frontend inside `frappe-bench/apps/crm/frontend`
 
 ### Docker
 
@@ -318,30 +244,11 @@ After setting up with PostgreSQL, you can verify the compatibility by:
    bench --site sitename.localhost run-tests --app crm
    ```
 
-## Learn and connect
-
--   [Telegram Public Group](https://t.me/frappecrm)
--   [Discuss Forum](https://discuss.frappe.io/c/frappe-crm)
--   [Documentation](https://docs.frappe.io/crm)
--   [YouTube](https://www.youtube.com/channel/UCn3bV5kx77HsVwtnlCeEi_A)
--   [X/Twitter](https://x.com/frappetech)
-
 ## Contributing
 
-This is a modified version focused on PostgreSQL compatibility. If you find any PostgreSQL-related issues or want to contribute improvements:
+This version includes PostgreSQL compatibility patches. If you find any PostgreSQL-related issues or want to contribute improvements:
 
 1. Check [POSTGRESQL_COMPATIBILITY_ISSUES.md](POSTGRESQL_COMPATIBILITY_ISSUES.md) for known issues
 2. Test your changes with both MySQL and PostgreSQL
 3. Ensure all SQL queries use conditional SQL generation
 4. Submit pull requests with clear descriptions of changes
-
-<br>
-<br>
-<div align="center" style="padding-top: 0.75rem;">
-	<a href="https://frappe.io" target="_blank">
-		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://frappe.io/files/Frappe-white.png">
-			<img src="https://frappe.io/files/Frappe-black.png" alt="Frappe Technologies" height="28"/>
-		</picture>
-	</a>
-</div>
