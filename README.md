@@ -92,6 +92,18 @@ This app is compatible with the following versions of Frappe and ERPNext:
 | main - v1.x           | stable    | v15.x                | v15.x                |
 | develop - future/v2.x | unstable  | develop - future/v16 | develop - future/v16 |
 
+### Database Support
+
+Frappe CRM now supports both **MySQL/MariaDB** and **PostgreSQL** databases. All SQL queries have been updated to be database-agnostic, using conditional SQL generation based on the database type. This includes:
+
+- ✅ Conversion of MySQL-specific functions (GROUP_CONCAT, DATE_FORMAT, DATE_ADD, DATE_SUB, TIMESTAMPDIFF, IFNULL) to PostgreSQL-compatible alternatives
+- ✅ Proper handling of date arithmetic and casting for both database types
+- ✅ PostgreSQL GROUP BY strictness compliance
+- ✅ Cross-database boolean field comparisons
+- ✅ Database-agnostic query builder usage
+
+For detailed information about the PostgreSQL compatibility implementation, see [POSTGRESQL_COMPATIBILITY_ISSUES.md](POSTGRESQL_COMPATIBILITY_ISSUES.md).
+
 ## Getting Started (Production)
 
 ### Managed Hosting
